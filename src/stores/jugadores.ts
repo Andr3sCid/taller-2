@@ -1,18 +1,20 @@
 import { defineStore } from "pinia";
 
-export const useCounterStore = defineStore("main", {
+export const useJugadoresStore = defineStore("main", {
   state: () => ({
     jugador: true,
+    marcaJugador: ""
   }),
   actions: {
     reset() {
       this.jugador = true;
+    
     },
     obtenerJugador() {
       if (this.jugador) {
-        return "X";
+        this.marcaJugador = "X"
       } else {
-        return "O";
+        this.marcaJugador = "O"
       }
     },
     cambiarJugador(){

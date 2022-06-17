@@ -5,7 +5,7 @@
 
     <section id="juego">
       <div id="zonaJuego">
-        <button id="zona1"></button>
+        <button id="zona1" onclick="obtenerJug">{{ marca }}</button>
         <button id="zona2"></button>
         <button id="zona3"></button>
         <button id="zona4"></button>
@@ -16,15 +16,20 @@
         <button id="zona9"></button>
       </div>
     </section>
-    <h1>{{main.counter}}</h1>
+    <h1>{{ main.counter }}</h1>
     <button @click="main.incrementar">Incrementar</button>
   </div>
 </template>
 
 <script setup>
-import { useCounterStore } from "../stores/counter";
-const main = useCounterStore();
-const contador = main.counter;
+import { useJugadoresStore } from "../stores/jugadores";
+const main = useJugadoresStore();
+
+function obtenerJug() {
+  main.obtenerJugador;
+  marca = main.marcaJugador;
+}
+
 
 
 </script>
