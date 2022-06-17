@@ -6,15 +6,15 @@
 
     <section id="juego">
         <div id="zonaJuego">
-        <div id="zona1"></div>
-        <div id="zona2"></div>
-        <div id="zona3"></div>
-        <div id="zona4"></div>
-        <div id="zona5"></div>
-        <div id="zona6"></div>
-        <div id="zona7"></div>
-        <div id="zona8"></div>
-        <div id="zona9"></div>
+        <button id="zona1"></button>
+        <button id="zona2"></button>
+        <button id="zona3"></button>
+        <button id="zona4"></button>
+        <button id="zona5"></button>
+        <button id="zona6"></button>
+        <button id="zona7"></button>
+        <button id="zona8"></button>
+        <button id="zona9"></button>
     </div>
     </section>
 
@@ -34,6 +34,15 @@ export default {
 
     h1, h3{
         color: white;
+    }
+
+    button{
+        background-color: #042940;
+        border: none;
+    }
+
+    button:hover{
+        background-color: #0d4466
     }
 
     #juego{
