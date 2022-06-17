@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-
     <h1>JUEGO DEL GATO</h1>
     <h3>Comience el jugador X</h3>
 
     <section id="juego">
-        <div id="zonaJuego">
+      <div id="zonaJuego">
         <button id="zona1"></button>
         <button id="zona2"></button>
         <button id="zona3"></button>
@@ -15,96 +14,100 @@
         <button id="zona7"></button>
         <button id="zona8"></button>
         <button id="zona9"></button>
-    </div>
+      </div>
     </section>
-
+    <h1>{{main.counter}}</h1>
+    <button @click="main.incrementar">Incrementar</button>
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { useCounterStore } from "../stores/counter";
+const main = useCounterStore();
+const contador = main.counter;
 
-}
+
 </script>
 
 <style>
-    body{
-        background-color: #042940;
-    }
+body {
+  background-color: #042940;
+}
 
-    h1, h3{
-        color: white;
-    }
+h1,
+h3 {
+  color: white;
+}
 
-    button{
-        background-color: #042940;
-        border: none;
-    }
+button {
+  background-color: #042940;
+  border: none;
+}
 
-    button:hover{
-        background-color: #0d4466
-    }
+button:hover {
+  background-color: #0d4466;
+}
 
-    #juego{
-        width:100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    #zonaJuego{
-        display: grid;
-        grid-template-rows: 100px 100px 100px;
-        grid-template-columns: 100px 100px 100px;
-    }
+#juego {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-    #zona1{
-        border-right: 3px solid #D6D58E;
-        border-bottom: 3px solid #D6D58E;
-    }
+#zonaJuego {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+}
 
-    #zona2{
-        border-right: 3px solid #D6D58E;
-        border-left: 3px solid #D6D58E;
-        border-bottom: 3px solid #D6D58E;
-    }
+#zona1 {
+  border-right: 3px solid #d6d58e;
+  border-bottom: 3px solid #d6d58e;
+}
 
-    #zona3{
-        border-left: 3px solid #D6D58E;
-        border-bottom: 3px solid #D6D58E;
-    }
+#zona2 {
+  border-right: 3px solid #d6d58e;
+  border-left: 3px solid #d6d58e;
+  border-bottom: 3px solid #d6d58e;
+}
 
-    #zona4{
-        border-right: 3px solid #D6D58E;
-        border-top: 3px solid #D6D58E;
-        border-bottom: 3px solid #D6D58E;
-    }
+#zona3 {
+  border-left: 3px solid #d6d58e;
+  border-bottom: 3px solid #d6d58e;
+}
 
-    #zona5{
-        border-right: 3px solid #D6D58E;
-        border-top: 3px solid #D6D58E;
-        border-bottom: 3px solid #D6D58E;
-        border-left: 3px solid #D6D58E;
-    }
+#zona4 {
+  border-right: 3px solid #d6d58e;
+  border-top: 3px solid #d6d58e;
+  border-bottom: 3px solid #d6d58e;
+}
 
-    #zona6{
-        border-left: 3px solid #D6D58E;
-        border-top: 3px solid #D6D58E;
-        border-bottom: 3px solid #D6D58E;
-    }
+#zona5 {
+  border-right: 3px solid #d6d58e;
+  border-top: 3px solid #d6d58e;
+  border-bottom: 3px solid #d6d58e;
+  border-left: 3px solid #d6d58e;
+}
 
-    #zona7{
-        border-right: 3px solid #D6D58E;
-        border-top: 3px solid #D6D58E;
-    }
+#zona6 {
+  border-left: 3px solid #d6d58e;
+  border-top: 3px solid #d6d58e;
+  border-bottom: 3px solid #d6d58e;
+}
 
-    #zona8{
-        border-right: 3px solid #D6D58E;
-        border-left: 3px solid #D6D58E;
-        border-top: 3px solid #D6D58E;
-    }
+#zona7 {
+  border-right: 3px solid #d6d58e;
+  border-top: 3px solid #d6d58e;
+}
 
-    #zona9{
-        border-top: 3px solid #D6D58E;
-        border-left: 3px solid #D6D58E;
-    }
+#zona8 {
+  border-right: 3px solid #d6d58e;
+  border-left: 3px solid #d6d58e;
+  border-top: 3px solid #d6d58e;
+}
+
+#zona9 {
+  border-top: 3px solid #d6d58e;
+  border-left: 3px solid #d6d58e;
+}
 </style>
