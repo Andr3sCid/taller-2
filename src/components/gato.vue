@@ -25,7 +25,7 @@
         </button>
       </div>
     </section>
-    <h1>{{ main.counter }}</h1>
+    <h1 v-if="main.ganador()!=null"> a ganado el jugador {{main.ganador()}}</h1>
     <button class="button_reset" v-on:click="reset()">reiniciar</button>
   </div>
 </template>
@@ -40,6 +40,7 @@ function obtenerJug(num) {
 function reset(){
   main.reset();
 }
+
 
 
 </script>
