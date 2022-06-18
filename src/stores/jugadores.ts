@@ -1,24 +1,25 @@
 import { defineStore } from "pinia";
 
-export const useJugadoresStore = defineStore("main", {
+export const useJugadoresStore = defineStore("main1", {
   state: () => ({
     jugador: true,
-    marcaJugador: ""
+    marcaJugador: ["","","","","","","","",""],
   }),
   actions: {
     reset() {
       this.jugador = true;
-    
+      this.marcaJugador= ["","","","","","","","",""];
     },
-    obtenerJugador() {
+    obtenerJugador(num) {
       if (this.jugador) {
-        this.marcaJugador = "X"
+        this.marcaJugador[num] = "X"
       } else {
-        this.marcaJugador = "O"
+        this.marcaJugador[num] = "O"
       }
+      this.cambiarJugador();
     },
     cambiarJugador(){
         this.jugador = !this.jugador;
-    }
-  },
+    },
+  }
 });
